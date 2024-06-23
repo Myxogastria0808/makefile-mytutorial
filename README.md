@@ -87,3 +87,5 @@ gcc main.c -o hello
 https://sagiegurari.github.io/cargo-make/
 
 https://www.tkat0.dev/posts/cargo-make-1/
+
+https://qiita.com/ota42y/items/299197505062d4f7958b

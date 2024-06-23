@@ -1,3 +1,7 @@
+#デフォルトで用意されているタスクをすべて無効化
+[config]
+skip_core_tasks = true
+
 [tasks.COMPILE]
 description = "compile source files"
 script = ['''
@@ -5,3 +9,36 @@ script = ['''
 gcc main.c -o hello
 ./hello
 ''']
+
+[tasks.python]
+description = "exec python program"
+script_runner = "python3"
+script_extension = "py"
+script = '''
+print("Hello, cargo-make!")
+'''
+
+[tasks.js]
+description = "exec js progrm"
+script_runner = "node"
+script_extension = "js"
+script = '''
+console.log("Hello, cargo-make!")
+'''
+
+[tasks.ts]
+description = "exec ts program"
+script_runner = "bun"
+script_extension = "ts"
+script = '''
+const hello: string = "Hello, cargo-make!";
+console.log(hello);
+'''
+
+[tasks.r]
+description = "exec r program"
+script_runner = "Rscript"
+script_extension = "r"
+script = '''
+paste0("Hello, cargo-make!")
+'''

@@ -1,0 +1,7 @@
+[tasks.r]
+description = "Hello, R!"
+script_runner = "Rscript"
+script_extension = "r"
+script = '''
+paste0("Hello, World!")
+'''
