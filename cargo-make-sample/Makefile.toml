@@ -1,0 +1,7 @@
+[tasks.COMPILE]
+description = "compile source files"
+script = ['''
+#!/bin/bash
+gcc main.c -o hello
+./hello
+''']
