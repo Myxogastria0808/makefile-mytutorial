@@ -54,7 +54,7 @@ https://qiita.com/yagiyuki/items/ff343d381d9477e89f3b#%20Makefile%E3%81%AE%E3%82
 
 https://qiita.com/mizcii/items/cfbd2aa17f6b7517c37f
 
-# cargo-make
+# cargo-make 入門
 
 ## install
 
