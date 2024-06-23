@@ -1,7 +1,8 @@
-#デフォルトで用意されているタスクをすべて無効化
+#デフォルトで用意されているmake!タスクをすべて無効化
 [config]
 skip_core_tasks = true
 
+#C言語はこれがベストっぽい
 [tasks.COMPILE]
 description = "compile source files"
 script = ['''
@@ -9,6 +10,33 @@ script = ['''
 gcc main.c -o hello
 ./hello
 ''']
+
+#C言語のコンパイルだけは以下でできる
+[tasks.c]
+description = "exec c program"
+script_runner = "gcc"
+script_extension = "c"
+script = '''
+#include <stdio.h>
+
+int main(void) {
+  printf("Hello, cargo-make!\n");
+  return 0;
+}
+'''
+
+[tasks.rust]
+description = "exec rust program"
+script_runner = "@rust"
+script = '''
+//! ```cargo
+//! [dependencies]
+//! ```
+fn main() {
+  const HELLO: &str = "Hello, cargo-make!";
+  println!("{}", HELLO);
+}
+'''
 
 [tasks.python]
 description = "exec python program"
